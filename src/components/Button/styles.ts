@@ -3,30 +3,25 @@ import media from 'styled-media-query'
 
 type Props = {
   wide: boolean
-  withPrice: boolean
 }
 
 const buttonModifiers = {
-  withPrice: (theme: DefaultTheme) => css`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: ${theme.spacings.xsmall};
-  `,
   wide: (theme: DefaultTheme) => css`
-    padding: 1.3rem ${theme.spacings.medium};
+    display: block;
+    padding: 0.4rem ${theme.spacings.medium};
 
     ${media.greaterThan('medium')`
-      padding: 1.3rem ${theme.spacings.large};
+      padding: 0.8rem ${theme.spacings.large};
     `}
   `
 }
 
 export const ButtonWrapper = styled.a<Props>`
-  ${({ theme, wide, withPrice }) => css`
+  ${({ theme, wide }) => css`
+    padding: ${theme.spacings.xxsmall};
     background: ${theme.colors.primary};
     border-radius: ${theme.border.radius};
-    color: ${theme.colors.white};
+    color: ${theme.colors.black};
     font-size: ${theme.font.sizes.xsmall};
     text-decoration: none;
     text-align: center;
@@ -38,6 +33,5 @@ export const ButtonWrapper = styled.a<Props>`
     }
 
     ${wide && buttonModifiers.wide(theme)};
-    ${withPrice && buttonModifiers.withPrice(theme)};
   `}
 `

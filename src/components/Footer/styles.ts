@@ -1,27 +1,14 @@
-import styled, { css } from 'styled-components'
-import media from 'styled-media-query'
+import styled from 'styled-components'
+import theme from 'styles/theme'
 
-export const Wrapper = styled.footer`
-  ${({ theme }) => css`
-    background: ${theme.colors.white};
-    color: ${theme.colors.gray};
-    text-align: center;
-    font-size: 1.3rem;
-    line-height: ${theme.font.sizes.xlarge};
-    position: relative;
-    z-index: 2;
-    margin-top: -${theme.spacings.medium};
+export const Wrapper = styled.div`
+  background-color: ${theme.colors.black};
+  padding: ${theme.spacings.xsmall} ${theme.spacings.large};
+`
 
-    ${media.greaterThan('medium')`
-      font-size: ${theme.font.sizes.small};
-      margin-top: -${theme.spacings.xxlarge};
-      padding-bottom: ${theme.spacings.large};
-    `}
-
-    a {
-      color: ${theme.colors.primary};
-      text-decoration: none;
-      border-bottom: 1px solid ${theme.colors.primary};
-    }
-  `}
+export const Text = styled.p`
+  font-size: ${theme.font.sizes.xxsmall};
+  font-weight: 300;
+  text-align: center;
+  color: ${theme.colors.primary};
 `

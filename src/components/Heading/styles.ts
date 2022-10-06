@@ -1,49 +1,46 @@
 import styled, { css, DefaultTheme } from 'styled-components'
 import media from 'styled-media-query'
 
-import { Props } from '.'
+type WrapperProps = {
+  center?: boolean
+}
 
 const wrapperModifiers = {
-  defaultColor: (theme: DefaultTheme) => css`
-    color: ${theme.colors.black};
-  `,
-
-  reverseColor: (theme: DefaultTheme) => css`
-    color: ${theme.colors.white};
-  `,
-
-  lineLeft: (theme: DefaultTheme) => css`
-    border-left: 7px solid ${theme.colors.secondary};
-  `,
-
-  lineBottom: (theme: DefaultTheme) => css`
-    padding-left: 0;
-    position: relative;
-    margin-bottom: ${theme.spacings.medium};
-    &::after {
-      content: ' ';
-      border-bottom: 5px solid ${theme.colors.primary};
-      width: 5rem;
-      position: absolute;
-      left: 0;
-      bottom: -1rem;
-    }
+  cetralized: (theme: DefaultTheme) => css`
+    text-align: center;
   `
 }
 
-export const Wrapper = styled.h2<Props>`
-  ${({ theme, reverseColor, lineBottom }) => css`
-    padding-left: 1rem;
+export const Wrapper = styled.div<WrapperProps>`
+  ${({ theme, center }) => css`
     font-size: ${theme.font.sizes.medium};
 
     ${media.greaterThan('medium')`
       font-size: ${theme.font.sizes.large};
     `}
 
-    ${!reverseColor && wrapperModifiers.defaultColor(theme)};
-    ${reverseColor && wrapperModifiers.reverseColor(theme)};
+    ${center && wrapperModifiers.cetralized(theme)};
+  `}
+`
 
-    ${lineBottom && wrapperModifiers.lineBottom(theme)};
-    ${!lineBottom && wrapperModifiers.lineLeft(theme)};
+export const Title = styled.h1`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    font-weight: 800;
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.xlarge};
+    `}
+  `}
+`
+
+export const Subtitle = styled.h3`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    font-weight: 300;
+
+    ${media.greaterThan('medium')`
+      font-size: ${theme.font.sizes.medium};
+    `}
   `}
 `

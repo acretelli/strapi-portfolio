@@ -3,18 +3,15 @@ import React from 'react'
 import * as S from './styles'
 
 export type Props = {
-  reverseColor?: boolean
-  lineBottom?: boolean
-  children: string
+  center?: boolean
+  title: string
+  subtitle: string
 }
 
-const Heading: React.FC<Props> = ({
-  reverseColor = false,
-  lineBottom = false,
-  children
-}) => (
-  <S.Wrapper reverseColor={reverseColor} lineBottom={lineBottom}>
-    {children}
+const Heading: React.FC<Props> = ({ center = false, title, subtitle }) => (
+  <S.Wrapper center={center}>
+    <S.Title>{title}</S.Title>
+    <S.Subtitle>{subtitle}</S.Subtitle>
   </S.Wrapper>
 )
 
