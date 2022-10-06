@@ -5,8 +5,7 @@ A simple portfolio project starter to work with React, NextJS and Styled Compone
 ### 📦 Install
 
 ```
-$ git clone error: remote origin already exists.
-.git
+$ git clone https://github.com/acretelli/strapi-portfolio.git
 
 $ yarn install
 ```
