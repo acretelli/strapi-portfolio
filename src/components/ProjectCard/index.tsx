@@ -10,7 +10,7 @@ const ProjectCard = () => {
   const handleOpenPage = () => {
     router.push('/projects/project')
   }
-
+  
   return (
     <S.Card>
       <S.CardImage src="/img/project-image.jpg" alt="Imagem do projeto" />
