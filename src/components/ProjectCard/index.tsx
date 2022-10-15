@@ -6,7 +6,7 @@ import * as S from './styles'
 const ProjectCard = () => (
   <S.Card>
     <S.CardImage src="/img/project-image.jpg" alt="Imagem do projeto" />
-    <S.CardTitle>Medroom Learning Platform</S.CardTitle>
+    <S.CardTitle>Socorro Learning Platform</S.CardTitle>
     <S.CardSkillsWrapper>
       <S.CardSkill>UX</S.CardSkill>
       <S.CardSkill>UI</S.CardSkill>
