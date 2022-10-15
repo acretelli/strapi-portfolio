@@ -1,11 +1,8 @@
 import React from 'react'
-import Container from 'components/Container'
-import ContentHeader from 'components/ContentHeader'
+import ProjectPage from 'templates/ProjectPage'
 
-const ProjectPage = () => (
-  <Container>
-    <ContentHeader />
-  </Container>
+const Project = () => (
+  <ProjectPage />
 )
 
-export default ProjectPage
+export default Project

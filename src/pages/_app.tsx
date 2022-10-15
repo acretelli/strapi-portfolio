@@ -18,21 +18,21 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
       </Head>
       <NextSeo
-        title="UX/UI/Development Portfolio"
-        description="Aprenda a criar um Ecommerce completo, indo do Backend ao Frontend utilizando tecnologias como ReactJS, NextJS, Strapi, GraphQL, Apollo e muito mais!"
-        canonical="https://reactavancado.com.br/"
+        title="Portfolio"
+        description="I'm baby keffiyeh pop-up la croix taiyaki vape. La croix irony farm-to-table waistcoat same disrupt four dollar toast before they sold out fit affogato biodiesel slow-carb vegan banjo."
+        canonical="https://sitename.com.br/"
         openGraph={{
-          url: 'https://reactavancado.com.br/',
+          url: 'https://sitename.com.br/',
           title:
-            'React Avançado - Crie aplicações reais com NextJS, GraphQL e mais.',
+            'Portfólio',
           description:
-            'Aprenda a criar um Ecommerce completo, indo do Backend ao Frontend utilizando tecnologias como ReactJS, NextJS, Strapi, GraphQL, Apollo e muito mais!',
-          images: [{ url: 'https://reactavancado.com.br/img/cover.png' }],
-          site_name: 'React Avançado',
+            'I am baby keffiyeh pop-up la croix taiyaki vape. La croix irony farm-to-table waistcoat same disrupt four dollar toast before they sold out fit affogato biodiesel slow-carb vegan banjo.',
+          images: [{ url: 'https://sitename.com.br/img/cover.png' }],
+          site_name: 'Portfólio',
           locale: 'pt_BR'
         }}
         twitter={{
-          handle: '@Willian_justen',
+          handle: '@annacretelli',
           site: '@site',
           cardType: 'summary_large_image'
         }}

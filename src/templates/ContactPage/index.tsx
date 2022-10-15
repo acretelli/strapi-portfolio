@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Heading from 'components/Heading'
-import Button from 'components/Button'
+import Heading from '../../components/Heading'
+import Button from '../../components/Button'
+import SocialMediaUrl from '../../components/SocialMediaUrl'
 
 import * as S from './styles'
-import SocialMediaUrl from 'components/SocialMediaUrl'
 
-const SectionContact = () => (
+const ContactPage = () => (
   <S.Wrapper>
     <Heading
       center
@@ -28,4 +28,4 @@ const SectionContact = () => (
   </S.Wrapper>
 )
 
-export default SectionContact
+export default ContactPage

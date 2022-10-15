@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Container from 'components/Container'
-import ProjectsPage from 'components/ProjectsPage'
+import ProjectsPage from 'templates/ProjectsPage'
 
 const Projects = () => {
   return (

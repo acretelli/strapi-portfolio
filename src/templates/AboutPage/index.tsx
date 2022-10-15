@@ -1,11 +1,11 @@
 import React from 'react'
 
-import ContentHeader from 'components/ContentHeader'
-import Button from 'components/Button'
+import ContentHeader from '../../components/ContentHeader'
+import Button from '../../components/Button'
+import AcademicFormationCard from '../../components/AcademicFormationCard'
+import ProfessionalExperienceCard from '../../components/ProfessionalExperienceCard'
 
 import * as S from './styles'
-import AcademicFormationCard from 'components/AcademicFormationCard'
-import ProfessionalExperienceCard from 'components/ProfessionalExperienceCard'
 
 const AboutPage = () => (
   <S.Wrapper>

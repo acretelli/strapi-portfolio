@@ -1,11 +1,11 @@
 import React from 'react'
 
 import Container from 'components/Container'
-import SectionContact from 'components/SectionContact'
+import ContactPage from 'templates/SectionContact'
 
 const Contact = () => (
   <Container>
-    <SectionContact />
+    <ContactPage />
   </Container>
 )
 
