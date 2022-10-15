@@ -11,7 +11,7 @@ import SectionWorkFields from 'components/SectionWorkFields'
 import SectionDownload from 'components/SectionDownload'
 import Container from 'components/Container'
 
-const Index = ({ logo, homeHeader }: HomePageProps) => (
+const Index = ({}: HomePageProps) => (
   <Container>
     <HomeHeader />
     <SectionProjects />
@@ -21,14 +21,14 @@ const Index = ({ logo, homeHeader }: HomePageProps) => (
   </Container>
 )
 
-export const getStaticProps: GetStaticProps = async () => {
-  const { home } = await client.request(GET_HOME)
+// export const getStaticProps: GetStaticProps = async () => {
+//   const { home } = await client.request(GET_HOME)
 
-  return {
-    props: {
-      ...home
-    }
-  }
-}
+//   return {
+//     props: {
+//       ...home
+//     }
+//   }
+// }
 
 export default Index
