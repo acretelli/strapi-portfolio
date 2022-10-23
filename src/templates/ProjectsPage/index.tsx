@@ -1,8 +1,8 @@
 import React from 'react'
 
-import ContentHeader from 'components/ContentHeader'
-import ProjectCard from 'components/ProjectCard'
-import Button from 'components/Button'
+import ContentHeader from '../../components/ContentHeader'
+import ProjectCard from '../../components/ProjectCard'
+import Button from '../../components/Button'
 
 import * as S from './styles'
 

@@ -2,16 +2,23 @@ import React from 'react'
 
 import * as S from './styles'
 
-const AcademicFormationCard = () => (
+type Props = {
+  title: string
+  text: string
+  yearStart: number
+  yearEnd: number
+}
+
+const AcademicFormationCard = ({ title, text, yearStart, yearEnd }: Props) => (
   <S.Wrapper>
     <S.Column>
-      <S.Course>M.A. History</S.Course>
-      <S.Institution>
-        Federal University of Rio Grande do Sul (UFRGS)
-      </S.Institution>
+      <S.Course>{title}</S.Course>
+      <S.Institution>{text}</S.Institution>
     </S.Column>
     <S.Column>
-      <S.Year>206</S.Year>
+      <S.Year>
+        {yearStart} - {yearEnd}
+      </S.Year>
     </S.Column>
   </S.Wrapper>
 )

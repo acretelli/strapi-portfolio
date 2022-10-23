@@ -13,7 +13,6 @@ export const Icon = styled.img`
   width: 94px;
   height: 94px;
   border-radius: 50%;
-  background-color: ${theme.colors.black};
 `
 
 export const UrlText = styled.a`

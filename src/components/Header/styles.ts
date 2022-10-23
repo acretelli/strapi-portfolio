@@ -10,6 +10,14 @@ export const Wrapper = styled.div`
   padding: ${theme.spacings.xsmall};
 `
 
+export const LogoWrapper = styled.div`
+  cursor: pointer;
+
+  :hover {
+    opacity: 0.95;
+  }
+`
+
 export const Navigation = styled.ul`
   display: flex;
   align-items: center;

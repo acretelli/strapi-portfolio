@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import theme from 'styles/theme'
 
 export const Wrapper = styled.div`
@@ -56,6 +57,13 @@ export const Image = styled.img`
 
 export const ButtonsWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   gap: ${theme.spacings.xxsmall};
   margin-top: ${theme.spacings.small};
+
+  ${media.greaterThan('small')`
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: ${theme.spacings.xxsmall};
+  `}
 `

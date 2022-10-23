@@ -1,12 +1,20 @@
 import React from 'react'
+import { SocialButtonsProps } from 'types/api'
 import { getImageUrl } from 'utils/getImageUrl'
 
 import * as S from './styles'
 
-const SocialMediaUrl = () => (
+type Props = {
+  socialMediaUrl: SocialButtonsProps
+}
+
+const SocialMediaUrl = ({ socialMediaUrl }: Props) => (
   <S.Wrapper>
-    <S.Icon src={getImageUrl('/img/logo.svg')} alt="" />
-    <S.UrlText href="mailto:anna.cbf@gmail.com">anna.cbf@gmail.com</S.UrlText>
+    <S.Icon
+      src={getImageUrl(socialMediaUrl.image.url)}
+      alt={socialMediaUrl.image.alternativeText}
+    />
+    <S.UrlText href={socialMediaUrl.url}>{socialMediaUrl.label}</S.UrlText>
   </S.Wrapper>
 )
 

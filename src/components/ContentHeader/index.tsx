@@ -5,18 +5,33 @@ import * as S from './styles'
 import Heading from 'components/Heading'
 import { getImageUrl } from 'utils/getImageUrl'
 
-const ContentHeader = () => (
+type MediaProps = {
+  alternativeText: string
+  url: string
+}
+
+type Props = {
+  title?: string
+  subtitle?: string
+  description?: string
+  media?: MediaProps
+}
+
+const ContentHeader = ({
+  title = 'Title',
+  subtitle = 'Subtitle',
+  description = 'Description',
+  media
+}: Props) => (
   <S.Wrapper>
     <S.ContentBlock>
-      <Heading title="about me." subtitle="I'm a UI/UX product designer." />
-      <S.Text>
-        I have been worked in virtual reality, communication and publishing
-        companies with design and development of graphic and digital products,
-        and I have more than ten years of experience in the area.
-      </S.Text>
+      <Heading title={title} subtitle={subtitle} />
+      <S.Text>{description}</S.Text>
     </S.ContentBlock>
 
-    <S.Media src={getImageUrl('/img/logo.svg')} alt="" />
+    {media && (
+      <S.Media src={getImageUrl(media.url)} alt={media.alternativeText} />
+    )}
   </S.Wrapper>
 )
 

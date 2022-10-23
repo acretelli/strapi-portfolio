@@ -1,26 +1,36 @@
+import React from 'react'
+
+import { ProjectsSectionProps } from 'types/api'
+
 import Button from 'components/Button'
 import ProjectCard from 'components/ProjectCard'
-import React from 'react'
 
 import * as S from './styles'
 
-const SectionProjects = () => (
-  <S.Wrapper>
-    <S.TextBlock>
-      <S.MainText>Do you want to see some of my work?</S.MainText>
-    </S.TextBlock>
-    <S.CardsContainer>
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-    </S.CardsContainer>
-    <S.ButtonWrapper>
-      <Button wide href="" onClick={() => console.log('oi')}>
-        More projects
-      </Button>
-    </S.ButtonWrapper>
-  </S.Wrapper>
-)
+type Props = {
+  projectsSection: ProjectsSectionProps
+}
+
+const SectionProjects = ({ projectsSection }: Props) => {
+  return (
+    <S.Wrapper>
+      <S.TextBlock>
+        <S.Title>{projectsSection.title}</S.Title>
+        <S.MainText>{projectsSection.subtitle}</S.MainText>
+      </S.TextBlock>
+      <S.CardsContainer>
+        {projectsSection.projects &&
+          projectsSection.projects.map((item, index) => {
+            return <ProjectCard project={item} key={index} />
+          })}
+      </S.CardsContainer>
+      <S.ButtonWrapper>
+        <Button wide href="" onClick={() => console.log('oi')}>
+          More projects
+        </Button>
+      </S.ButtonWrapper>
+    </S.Wrapper>
+  )
+}
 
 export default SectionProjects

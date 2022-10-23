@@ -1,30 +1,30 @@
 import React from 'react'
+import { ContactSectionProps } from 'types/api'
 
-import Heading from 'components/Heading'
-import Button from 'components/Button'
+import Heading from '../Heading'
+import SocialMediaUrl from '../SocialMediaUrl'
 
 import * as S from './styles'
-import SocialMediaUrl from 'components/SocialMediaUrl'
 
-const SectionContact = () => (
+type Props = {
+  contactSection: ContactSectionProps
+}
+
+const SectionContact = ({ contactSection }: Props) => (
   <S.Wrapper>
     <Heading
       center
-      title="contact."
-      subtitle="Here is where you can find me."
+      title={contactSection.title}
+      subtitle={contactSection.subtitle}
     />
-    <S.SocialMediaContainer>
-      <SocialMediaUrl />
-      <SocialMediaUrl />
-      <SocialMediaUrl />
-      <SocialMediaUrl />
-      <SocialMediaUrl />
-    </S.SocialMediaContainer>
-    <S.ButtonWrapper>
-      <Button wide href="/" onClick={() => console.log('oi')}>
-        Back to Home
-      </Button>
-    </S.ButtonWrapper>
+    {contactSection.socialBtns &&
+      contactSection.socialBtns.map((item, index) => {
+        return (
+          <S.SocialMediaContainer key={index}>
+            <SocialMediaUrl socialMediaUrl={item} />
+          </S.SocialMediaContainer>
+        )
+      })}
   </S.Wrapper>
 )
 

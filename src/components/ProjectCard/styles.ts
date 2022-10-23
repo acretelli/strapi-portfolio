@@ -25,6 +25,7 @@ export const CardText = styled.p`
 export const CardImage = styled.img`
   height: 16rem;
   border-radius: 0.4rem;
+  object-fit: cover;
 `
 
 export const CardSkillsWrapper = styled.div`
