@@ -1,31 +1,36 @@
 import { useRouter } from 'next/router'
 import Button from 'components/Button'
 import React from 'react'
+import { getImageUrl } from 'utils/getImageUrl'
+import { ProjectsProps } from 'types/api'
 
 import * as S from './styles'
 
-const ProjectCard = () => {
+type Props = {
+  project: ProjectsProps
+}
+
+const ProjectCard = ({ project }: Props) => {
   const router = useRouter()
 
   const handleOpenPage = () => {
     router.push('/projects/project')
   }
-  
+
   return (
     <S.Card>
-      <S.CardImage src="/img/project-image.jpg" alt="Imagem do projeto" />
-      <S.CardTitle>Medroom Learning Platform</S.CardTitle>
+      <S.CardImage
+        src={getImageUrl(project.media.url)}
+        alt={project.media.alternativeText}
+      />
+      <S.CardTitle>{project.title}</S.CardTitle>
       <S.CardSkillsWrapper>
-        <S.CardSkill>UX</S.CardSkill>
-        <S.CardSkill>UI</S.CardSkill>
-        <S.CardSkill>Figma</S.CardSkill>
-        <S.CardSkill>Storybook</S.CardSkill>
-        <S.CardSkill>Reactjs</S.CardSkill>
+        {project.skills &&
+          project.skills.map((item, index) => {
+            return <S.CardSkill key={index}>{item.skills}</S.CardSkill>
+          })}
       </S.CardSkillsWrapper>
-      <S.CardText>
-        As a designer, I’ve conduct research, planning and documentation of user’s
-        behavior, insights and priorization, and develop friendly interfaces.
-      </S.CardText>
+      <S.CardText>{project.description}</S.CardText>
       <Button href="" onClick={handleOpenPage}>
         get to know it
       </Button>

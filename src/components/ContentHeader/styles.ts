@@ -14,6 +14,8 @@ export const ContentBlock = styled.div`
   flex-direction: column;
   gap: ${theme.spacings.xsmall};
   max-width: 40rem;
+
+  text-align: center;
 `
 export const Text = styled.p``
 export const Media = styled.img`

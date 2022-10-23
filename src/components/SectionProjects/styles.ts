@@ -6,9 +6,16 @@ export const Wrapper = styled.div``
 export const TextBlock = styled.div`
   max-width: 80rem;
   margin: ${theme.spacings.large} auto ${theme.spacings.medium};
+  text-align: center;
 `
 
-export const MainText = styled.p``
+export const Title = styled.h2`
+  font-weight: 700;
+`
+
+export const MainText = styled.h3`
+  font-weight: 300;
+`
 
 export const CardsContainer = styled.div`
   display: flex;

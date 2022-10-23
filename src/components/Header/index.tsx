@@ -6,17 +6,17 @@ import Logo from 'components/Logo'
 
 import * as S from './styles'
 
-const Header = () => {
-const router = useRouter()
+const Header = ({ logo }) => {
+  const router = useRouter()
 
-const handleGoToHome = () => {
-  router.push('/')
-}
+  const handleGoToHome = () => {
+    router.push('/')
+  }
 
-return (
+  return (
     <S.Wrapper>
       <S.LogoWrapper onClick={handleGoToHome}>
-      <Logo url="/img/logo.svg" alternativeText="Logo" />
+        <Logo url={logo.url} alternativeText={logo.alternativeText} />
       </S.LogoWrapper>
       <S.Navigation>
         <S.NavLink>
@@ -27,16 +27,6 @@ return (
         <S.NavLink>
           <Link href="/projects">
             <a>projects</a>
-          </Link>
-        </S.NavLink>
-        <S.NavLink>
-          <Link href="/about">
-            <a>about</a>
-          </Link>
-        </S.NavLink>
-        <S.NavLink>
-          <Link href="/contact">
-            <a>contact</a>
           </Link>
         </S.NavLink>
       </S.Navigation>
