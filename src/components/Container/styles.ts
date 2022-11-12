@@ -6,8 +6,5 @@ export const Container = styled.div`
     min-height: calc(100vh - 112px);
 
     margin: 0 auto;
-
-    ${media.greaterThan('medium')` / 2);
-    `}
   `}
 `

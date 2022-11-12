@@ -1,4 +1,5 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 
 import { ProjectsSectionProps } from 'types/api'
 
@@ -13,7 +14,7 @@ type Props = {
 
 const SectionProjects = ({ projectsSection }: Props) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="projects">
       <S.TextBlock>
         <S.Title>{projectsSection.title}</S.Title>
         <S.MainText>{projectsSection.subtitle}</S.MainText>
@@ -24,11 +25,6 @@ const SectionProjects = ({ projectsSection }: Props) => {
             return <ProjectCard project={item} key={index} />
           })}
       </S.CardsContainer>
-      <S.ButtonWrapper>
-        <Button wide href="" onClick={() => console.log('oi')}>
-          More projects
-        </Button>
-      </S.ButtonWrapper>
     </S.Wrapper>
   )
 }

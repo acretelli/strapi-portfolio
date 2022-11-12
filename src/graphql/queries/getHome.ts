@@ -22,6 +22,7 @@ const GET_HOME = /* GraphQL */ `
       skills {
         id
         skills
+        url
       }
     }
   }
@@ -30,6 +31,7 @@ const GET_HOME = /* GraphQL */ `
       title
       subtitle
       projects {
+        id
         title
         subtitle
         description
@@ -112,6 +114,20 @@ const GET_HOME = /* GraphQL */ `
     }
   }
 
+  fragment SkillsDetails on Home {
+    SkillsDetails {
+      id
+      title
+      subtitle
+      description
+      media {
+        url
+        alternativeText
+      }
+      slug
+    }
+  }
+
   query GET_HOME {
     home {
       ...logo
@@ -121,6 +137,7 @@ const GET_HOME = /* GraphQL */ `
       ...infoListSection
       ...contactSection
       ...downloadModule
+      ...SkillsDetails
     }
   }
 `

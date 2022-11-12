@@ -3,7 +3,7 @@ import media from 'styled-media-query'
 import theme from 'styles/theme'
 
 export const Wrapper = styled.div`
-  min-height: calc(100vh - 60px);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

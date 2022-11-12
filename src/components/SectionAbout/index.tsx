@@ -3,9 +3,7 @@ import React from 'react'
 import { AboutSectionProps, InfoListSectionProps } from 'types/api'
 
 import ContentHeader from '../ContentHeader'
-import Button from '../Button'
 import AcademicFormationCard from '../AcademicFormationCard'
-import ProfessionalExperienceCard from '../ProfessionalExperienceCard'
 
 import * as S from './styles'
 
@@ -16,7 +14,7 @@ type Props = {
 
 const SectionAbout = ({ aboutSection, infoListSection }: Props) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="about-me">
       <ContentHeader
         title={aboutSection.title}
         subtitle={aboutSection.subtitle}
@@ -32,17 +30,19 @@ const SectionAbout = ({ aboutSection, infoListSection }: Props) => {
                 <S.Title>{item.title}</S.Title>
                 <S.Subtitle>{item.subtitle}</S.Subtitle>
               </S.TextBlock>
-              {item.list.map((listItem, index) => {
-                return (
-                  <AcademicFormationCard
-                    title={listItem.title}
-                    text={listItem.text}
-                    yearStart={listItem.yearStart}
-                    yearEnd={listItem.yearEnd}
-                    key={index}
-                  />
-                )
-              })}
+              <S.InfoBlock>
+                {item.list.map((listItem, index) => {
+                  return (
+                    <AcademicFormationCard
+                      title={listItem.title}
+                      text={listItem.text}
+                      yearStart={listItem.yearStart}
+                      yearEnd={listItem.yearEnd}
+                      key={index}
+                    />
+                  )
+                })}
+              </S.InfoBlock>
             </S.AcademicFormationContainer>
           )
         })}

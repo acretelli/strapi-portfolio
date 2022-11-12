@@ -14,6 +14,7 @@ import SectionDownload from 'components/SectionDownload'
 import Container from 'components/Container'
 import SectionAbout from 'components/SectionAbout'
 import SectionContact from 'components/SectionContact'
+import SectionWorkFields from 'components/SectionWorkFields'
 
 const Index = ({
   logo,
@@ -22,13 +23,15 @@ const Index = ({
   sectionAbout,
   infoListSection,
   contactSection,
-  downloadModule
+  downloadModule,
+  SkillsDetails
 }: HomePageProps) => {
   return (
     <>
       <Header logo={logo} />
       <Container>
         <HomeHeader homeHeader={homeHeader} />
+        <SectionWorkFields skillsDetails={SkillsDetails} />
         <SectionProjects projectsSection={projectsSection} />
         <SectionAbout
           aboutSection={sectionAbout}

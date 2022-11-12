@@ -11,15 +11,11 @@ type Props = {
 
 const AcademicFormationCard = ({ title, text, yearStart, yearEnd }: Props) => (
   <S.Wrapper>
-    <S.Column>
-      <S.Course>{title}</S.Course>
-      <S.Institution>{text}</S.Institution>
-    </S.Column>
-    <S.Column>
-      <S.Year>
-        {yearStart} - {yearEnd}
-      </S.Year>
-    </S.Column>
+    <S.Course>{title}</S.Course>
+    <S.Institution>{text}</S.Institution>
+    <S.Year>
+      {yearStart} - {yearEnd}
+    </S.Year>
   </S.Wrapper>
 )
 

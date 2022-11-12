@@ -9,12 +9,12 @@ type Props = {
 }
 
 const SocialMediaUrl = ({ socialMediaUrl }: Props) => (
-  <S.Wrapper>
+  <S.Wrapper href={socialMediaUrl.url}>
     <S.Icon
       src={getImageUrl(socialMediaUrl.image.url)}
       alt={socialMediaUrl.image.alternativeText}
     />
-    <S.UrlText href={socialMediaUrl.url}>{socialMediaUrl.label}</S.UrlText>
+    <S.UrlText>{socialMediaUrl.label}</S.UrlText>
   </S.Wrapper>
 )
 

@@ -27,6 +27,7 @@ export const ButtonWrapper = styled.a<Props>`
     text-align: center;
     white-space: nowrap;
     transition: background 0.3s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       background: ${theme.colors.primaryHover};

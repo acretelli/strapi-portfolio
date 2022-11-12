@@ -11,7 +11,7 @@ type Props = {
 }
 
 const SectionContact = ({ contactSection }: Props) => (
-  <S.Wrapper>
+  <S.Wrapper id="contact">
     <Heading
       center
       title={contactSection.title}

@@ -1,12 +1,15 @@
 import styled from 'styled-components'
 import theme from 'styles/theme'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.a`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: ${theme.spacings.xsmall};
+
+  color: inherit;
+  text-decoration: none;
 `
 
 export const Icon = styled.img`
@@ -15,7 +18,4 @@ export const Icon = styled.img`
   border-radius: 50%;
 `
 
-export const UrlText = styled.a`
-  color: inherit;
-  text-decoration: none;
-`
+export const UrlText = styled.p``

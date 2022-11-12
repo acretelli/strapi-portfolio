@@ -21,6 +21,7 @@ export type SocialButtonsProps = {
 export type SkillsProps = {
   id: string
   skills: string
+  url: string
 }
 
 export type ListProps = {
@@ -31,7 +32,18 @@ export type ListProps = {
   yearEnd: number
 }
 
+export type MediaProps = {
+  url: string
+  alternativeText: string
+}
+
+export type MediaTextProps = {
+  text: string
+  media: MediaProps[]
+}
+
 export type ProjectsProps = {
+  id: string
   title: string
   subtitle: string
   description: string
@@ -40,13 +52,7 @@ export type ProjectsProps = {
     url: string
     alternativeText: string
   }
-  mediaText: {
-    text: string
-    media: {
-      url: string
-      alternativeText: string
-    }
-  }
+  mediaText: MediaTextProps[]
 }
 
 export type HomeHeaderProps = {
@@ -102,6 +108,15 @@ export type DownloadModuleProps = {
   }
 }
 
+export type SkillsDetailsProps = {
+  id: string
+  title: string
+  subtitle: string
+  description: string
+  media: MediaProps
+  slug: string
+}
+
 export type HomePageProps = {
   logo: LogoProps
   homeHeader: HomeHeaderProps
@@ -109,5 +124,6 @@ export type HomePageProps = {
   sectionAbout: AboutSectionProps
   infoListSection: InfoListSectionProps[]
   contactSection: ContactSectionProps
-  downloadModule: DownloadModuleProps
+  downloadModule: DownloadModuleProps[]
+  SkillsDetails: SkillsDetailsProps[]
 }

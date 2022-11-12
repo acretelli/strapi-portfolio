@@ -42,3 +42,42 @@ export const CardSkill = styled.span`
   font-size: ${theme.font.sizes.xxsmall};
   font-weight: 700;
 `
+
+export const CloseButton = styled.button`
+  background-color: transparent;
+
+  position: fixed;
+  top: ${theme.spacings.medium};
+  right: ${theme.spacings.medium};
+
+  cursor: pointer;
+`
+
+export const Modal = styled.div`
+  width: 100vw;
+  height: 100vh;
+  padding: ${theme.spacings.small};
+  background-color: ${theme.colors.white};
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+
+  overflow-y: scroll;
+`
+
+export const ModalContent = styled.div`
+  max-width: 800px;
+  margin: ${theme.spacings.small} auto;
+`
+
+export const Text = styled.p`
+  margin: ${theme.spacings.small} auto;
+`
+
+export const Image = styled.img`
+  width: 100%;
+  margin: ${theme.spacings.small} auto;
+`

@@ -25,8 +25,18 @@ const Header = ({ logo }) => {
           </Link>
         </S.NavLink>
         <S.NavLink>
-          <Link href="/projects">
+          <Link href="#projects">
             <a>projects</a>
+          </Link>
+        </S.NavLink>
+        <S.NavLink>
+          <Link href="#about-me">
+            <a>about me</a>
+          </Link>
+        </S.NavLink>
+        <S.NavLink>
+          <Link href="#contact">
+            <a>contact</a>
           </Link>
         </S.NavLink>
       </S.Navigation>

@@ -25,12 +25,7 @@ const HomeHeader = ({ homeHeader }: Props) => {
         {homeHeader.skills &&
           homeHeader.skills.map((skill) => {
             return (
-              <Button
-                key={skill.id}
-                wide
-                href=""
-                onClick={() => console.log('oi')}
-              >
+              <Button key={skill.id} wide href={skill.url}>
                 {skill.skills}
               </Button>
             )

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from 'styled-media-query'
 import theme from 'styles/theme'
 
 export const Wrapper = styled.div`
@@ -8,7 +9,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   gap: ${theme.spacings.medium};
 
-  max-width: 80rem;
+  max-width: 1024px;
   margin: ${theme.spacings.large} auto;
 `
 
@@ -24,13 +25,30 @@ export const FieldCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+
+  ${media.greaterThan('medium')`
+    flex-direction: row;
+
+    :nth-child(even) {
+      img {
+        order: 2;
+      }
+    }
+  `}
 `
 
 export const FieldCardImage = styled.img`
-  width: 50%;
-  height: 40rem;
+  order: 0;
+  width: 100%;
+  height: 20rem;
   object-fit: cover;
   object-position: left bottom;
+
+  ${media.greaterThan('medium')`
+    width: 50%;
+    height: 40rem;
+  `}
 `
 
 export const FieldCardTextBlock = styled.div`
@@ -41,6 +59,7 @@ export const FieldCardTextBlock = styled.div`
   gap: ${theme.spacings.xxsmall};
 
   padding: 0 ${theme.spacings.small};
+  text-align: center;
 `
 
 export const FieldCardTitle = styled.h2`

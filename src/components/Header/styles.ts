@@ -8,6 +8,12 @@ export const Wrapper = styled.div`
   background-color: ${theme.colors.black};
   color: ${theme.colors.primary};
   padding: ${theme.spacings.xsmall};
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
 `
 
 export const LogoWrapper = styled.div`
@@ -37,6 +43,16 @@ export const NavLink = styled.li`
     color: inherit;
   }
   a:hover {
+    color: ${theme.colors.primaryHover};
+  }
+`
+
+export const NavButton = styled.button`
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  :hover {
     color: ${theme.colors.primaryHover};
   }
 `

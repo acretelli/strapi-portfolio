@@ -5,8 +5,8 @@ import * as S from './styles'
 type Props = {
   children: React.ReactNode
   wide?: boolean
-  href: string
-  onClick: () => void
+  href?: string
+  onClick?: () => void
 }
 
 const Button: React.FC<Props> = ({ children, wide, href, onClick }) => (
