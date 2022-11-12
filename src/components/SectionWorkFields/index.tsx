@@ -11,7 +11,6 @@ type Props = {
 }
 
 const SectionWorkFields = ({ skillsDetails }: Props) => {
-  console.log(skillsDetails)
   return (
     <S.Wrapper>
       <S.FieldsCardsContainer>
